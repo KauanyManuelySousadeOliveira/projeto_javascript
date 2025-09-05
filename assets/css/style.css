@@ -95,6 +95,10 @@ criando estilo da modal logine cadastro
   gap: 1rem;
 }
 
+.input {
+  padding: 1rem 0;
+}
+
 .input input {
   outline: none;
   border: none;
@@ -103,4 +107,11 @@ criando estilo da modal logine cadastro
   font-size: 1.5rem;
   width: 100%;
   border-bottom: 0.5rem solid rgb(12, 153, 196);
+}
+
+.resultado_calcular {
+  padding: 1rem 0;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
 }
