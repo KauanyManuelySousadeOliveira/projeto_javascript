@@ -23,8 +23,6 @@ const calcular = (valor01, valor02) => {
   const multiplicar = valor01 * valor02;
   const dividir = valor01 / valor02;
 
-  console.log(typeof valor01);
-
   return (resultado.innerHTML = `
     <div class="calcular">
       <div class="soma">${soma}</div>
@@ -79,9 +77,13 @@ btnCancelRegister.addEventListener("click", (e) => {
   modalRegister.classList.add("hide-modal");
 });
 
-// inputEmail.addEventListener("input", () => {
-//   resultado.innerHTML = inputEmail.value
-// })
+inputEmail.addEventListener("input", () => {
+  if (inputEmail.value.length > 2) {
+    inputEmail.style.borderBottom = "0.5rem solid rgb(12, 153, 196)";
+  } else {
+    inputEmail.style.borderBottom = "0.5rem solid rgb(255, 0, 0)";
+  }
+});
 
 inputEmail.addEventListener("focus", () => {
   inputEmail.style.borderBottom = "0.5rem solid rgb(255, 0, 0)";
@@ -95,8 +97,41 @@ btnLoginOpen.addEventListener("click", (e) => {
   e.preventDefault();
   const email = inputEmail.value;
   const senha = inputSenha.value;
-  resultado.classList.add("resultado_calcular");
-  calcular(email, senha);
+
+  if (!email || !senha) {
+    const error_fields = `
+      <div class="error_msg">
+        Os campos não podem ser vazios, preencha os campos antes de enviar!
+      </div>
+    `;
+    return (resultado.innerHTML = error_fields);
+  }
+
+  if (inputEmail.value.length < 3) {
+    const error_fields = `
+      <div class="error_msg">
+        Formato do email está incorreto!
+      </div>
+    `;
+    return (resultado.innerHTML = error_fields);
+  }
+
+  if (inputSenha.value.length < 8) {
+    const error_fields = `
+      <div class="error_msg">
+        A senha precisa ter no minimo 8 caracteres!
+      </div>
+    `;
+    return (resultado.innerHTML = error_fields);
+  }
+
+  const success_msg = `
+    <div class="success_msg">
+      Login efetuado com sucesso!
+    </div>
+  `;
+
+  return (resultado.innerHTML = success_msg);
 });
 
 inputEmail.addEventListener("focusout", () => {

@@ -6,6 +6,9 @@
 
 body {
   background: rgb(12, 153, 196);
+  /* background: rgb(red, green, blue);
+  background: hsl(hue, saturation, lightness);
+  background: hsl(162, 100%, 50%); */
 }
 
 .container {
@@ -19,7 +22,7 @@ body {
 
 button {
   padding: 1rem 2rem;
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
   border: none;
   border-radius: 0.5rem;
@@ -34,9 +37,9 @@ button:hover {
   color: rgb(0, 0, 0);
 }
 
-/* *******************
-criando estilo da modal logine cadastro
-******************** */
+/* **************************************
+Criando estilo da modal login e cadastro
+***************************************** */
 
 .content-modal-login,
 .content-modal-register {
@@ -65,19 +68,18 @@ criando estilo da modal logine cadastro
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.697);
+  background: rgba(0, 0, 0, 0.702);
   transition: all 350ms ease-in-out;
-  z-index: 999;
 }
 
-/*********************************************
-    estilo dos botoes
-**********************************************/
+/* *****************************************
+    Estilo dos botões
+******************************************** */
 
 .btn-login-open {
-  border: 0.3rem solid rgba(12, 153, 196);
+  border: 0.3rem solid rgb(12, 153, 196);
   background: rgb(255, 255, 255);
-  color: rgba(12, 153, 196);
+  color: rgb(12, 153, 196);
 }
 
 .btn-login-open:hover {
@@ -85,9 +87,9 @@ criando estilo da modal logine cadastro
   color: rgb(255, 255, 255);
 }
 
-/* ****************************************
-    estilo do form e input
-********************************************/
+/* ************************************
+    Estilo do form e input
+************************************** */
 
 .content-form {
   display: flex;
@@ -114,4 +116,32 @@ criando estilo da modal logine cadastro
   font-size: 2rem;
   text-align: center;
   font-weight: bold;
+}
+
+.error_msg {
+  padding: 1rem;
+  background: rgb(255, 0, 0);
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  /* padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0; */
+}
+
+.success_msg {
+  padding: 1rem;
+  background: rgb(0, 199, 33);
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  /* padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0; */
 }

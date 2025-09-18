@@ -10,13 +10,13 @@
   <body>
     <section>
       <div class="container">
-        <button id="btn-login">login</button>
-        <button id="btn-register">cadastrar</button>
+        <button type="button" id="btn-login">Login</button>
+        <button type="button" id="btn-register">Cadastrar</button>
       </div>
     </section>
     <div class="modal-login hide-modal" id="modal-login">
       <div class="content-modal-login">
-        <h1>modal login</h1>
+        <h1>Modal Login</h1>
         <form id="form-login">
           <div class="content-form" id="content-form">
             <div class="input" id="input-email">
@@ -30,7 +30,7 @@
             </div>
             <div class="input" id="input-senha">
               <input
-                type="text"
+                type="password"
                 name="senha"
                 id="senha"
                 class="senha"
@@ -38,9 +38,15 @@
               />
             </div>
             <footer class="btn-group">
-              <button class="btn-login-open" id="btn-login-open">Login</button>
-              <button class="btn-cancel-login" id="btn-cancel-login">
-                cancelar
+              <button type="submit" class="btn-login-open" id="btn-login-open">
+                Login
+              </button>
+              <button
+                type="button"
+                class="btn-cancel-login"
+                id="btn-cancel-login"
+              >
+                Cancelar
               </button>
             </footer>
           </div>
@@ -49,9 +55,9 @@
       </div>
     </div>
     <div class="modal-register hide-modal" id="modal-register">
-      <div class="content-modal-login">
-        <h1>modal cadastrar</h1>
-        <button id="btn-cancel-register">cancelar</button>
+      <div class="content-modal-register">
+        <h1>Modal Cadastrar</h1>
+        <button type="button" id="btn-cancel-register">Cancelar</button>
       </div>
     </div>
     <script src="./assets/js/script.js"></script>
